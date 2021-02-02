@@ -6,10 +6,36 @@
             <lastname>Carter</lastname>
         </name>
         <admission_date>
-            <date></date>
-            <month></month>
+            <date>25</date>
+            <month>12</month>
+            <year>2015</year>
         </admission_date>
+    </student>
 
+    <student sr="2">
+        <slno>29</slno>
+        <name>
+            <firstname>Bob</firstname>
+            <lastname>Marshal</lastname>
+        </name>
+        <admission_date>
+            <date>13</date>
+            <month>01</month>
+            <year>1999</year>
+        </admission_date>
+    </student>
+
+    <student sr="3">
+        <slno>35</slno>
+        <name>
+            <firstname>Clark</firstname>
+            <lastname>Kent</lastname>
+        </name>
+        <admission_date>
+            <date>17</date>
+            <month>06</month>
+            <year>2005</year>
+        </admission_date>
     </student>
 
 
