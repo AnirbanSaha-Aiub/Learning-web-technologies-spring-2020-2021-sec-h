@@ -1,0 +1,16 @@
+<students>
+    <student sr="1">
+        <slno>23</slno>
+        <name>
+            <firstname>John</firstname>
+            <lastname>Carter</lastname>
+        </name>
+        <admission_date>
+            <date></date>
+            <month></month>
+        </admission_date>
+
+    </student>
+
+
+</students>
