@@ -14,7 +14,7 @@
         <legend>Grnder</legend>
             <input type="radio" name="gender" value="<?php if(isset($_POST['gender'])){ echo $_POST['gender']; }?> "> male
             <input type="radio" name="gender" value="<?php if(isset($_POST['gender'])){ echo $_POST['gender']; }?> "> Female
-            <input type="radio" name="gender" value="male"> Other
+            <input type="radio" name="gender" value="<?php if(isset($_POST['gender'])){ echo $_POST['gender']; }?> "> Other
             <br>
         <input type="submit" name="submit" value="Submit"><br>
       </fieldset>
