@@ -11,15 +11,15 @@
         <table>
           <tr>
             <td>Current Password:</td>
-            <td><input type="text" name="name" value=""></td>
+            <td><input type="password" name="c_pass" value=""></td>
           </tr>
           <tr>
             <td>New Password:</td>
-            <td><input type="password" name="pass" value=""></td>
+            <td><input type="password" name="n_pass" value=""></td>
           </tr>
           <tr>
             <td>Retype New Password:</td>
-            <td><input type="password" name="pass" value=""></td>
+            <td><input type="password" name="rn_pass" value=""></td>
           </tr>
         </table>
         <br>
