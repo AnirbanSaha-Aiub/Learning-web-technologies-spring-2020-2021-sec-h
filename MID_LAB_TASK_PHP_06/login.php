@@ -1,3 +1,20 @@
+<?php
+
+
+
+	if(isset($_POST['submit']))
+	{
+
+		$name = $_POST['name'];
+    $password =$_POST['pass'];
+
+		if($name == "" and $password == ""){
+			echo "null submission";
+		// }elseif($name == "" and $password == ""){
+		// 	echo "success...";
+		}
+	}
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
