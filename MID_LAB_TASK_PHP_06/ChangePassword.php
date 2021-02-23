@@ -1,3 +1,26 @@
+<?php
+
+
+
+	if(isset($_POST['submit']))
+	{
+
+		$c_pass = $_POST['c_pass'];
+    $n_pass =$_POST['n_pass'];
+    $rn_pass = $_POST['rn_pass'];
+
+		if($c_pass == "" and $n_pass == "" and $rn_pass == ""){
+			echo "null submission";
+    }elseif($c_pass != $n_pass and $n_pass == $rn_pass){
+		 	echo "Password is successfully changed";
+		}else {
+      echo "Invalid Password";
+    }
+	}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
