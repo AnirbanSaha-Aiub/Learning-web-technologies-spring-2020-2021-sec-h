@@ -1,8 +1,16 @@
+<?php
+	session_start();
+	if(isset($_SESSION['flag']))
+	{
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Change Profile picture</title>
+    <title>View Profile</title>
   </head>
   <body>
     <table border="1" cellspacing="0" width="100%" >
@@ -14,7 +22,7 @@
               <td align = "right">
                 Logged in as
                 <a href="viewProfile.html">Bob</a>|
-                <a href="publicHome.html">Logout</a>
+                <a href="logout.php">Logout</a>
               </td>
             </tr>
           </table>
@@ -35,17 +43,7 @@
           </ul>
         </td>
         <td>
-          <form class="" action="" method="post">
-            <fieldset>
-              <legend>Profile Picture</legend>
-              <img height="100px" width="100px" src="user.png" alt="">
-              <br>
-              <input type="file" name="file" value="">
-              <hr>
-              <br>
-              <input type="submit" name="submit" value="Submit">
-            </fieldset>
-          </form>
+
         </td>
       </tr>
 
@@ -57,3 +55,11 @@
 
   </body>
 </html>
+
+<?php
+
+	}else{
+		header('location: login.html');
+	}
+
+?>

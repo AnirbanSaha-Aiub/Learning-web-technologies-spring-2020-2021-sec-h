@@ -1,3 +1,10 @@
+<?php
+	session_start();
+	if(isset($_SESSION['flag']))
+	{
+?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -14,7 +21,7 @@
               <td align = "right">
                 Logged in as
                 <a href="viewProfile.html">Bob</a>|
-                <a href="publicHome.html">Logout</a>
+                <a href="logout.php">Logout</a>
               </td>
             </tr>
           </table>
@@ -47,3 +54,11 @@
 
   </body>
 </html>
+
+<?php
+
+	}else{
+		header('location: login.html');
+	}
+
+?>

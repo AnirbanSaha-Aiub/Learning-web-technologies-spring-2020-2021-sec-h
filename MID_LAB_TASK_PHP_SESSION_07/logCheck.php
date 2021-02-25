@@ -13,7 +13,7 @@
 
 			if($username == $user['username'] && $password == $user['password']){
 				$_SESSION['flag'] = true;
-				header('location: Dashboard.html');
+				header('location: Dashboard.php');
 			}else{
 				echo "invalid user";
 			}
