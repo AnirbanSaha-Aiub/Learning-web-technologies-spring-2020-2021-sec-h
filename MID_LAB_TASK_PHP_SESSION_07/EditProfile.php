@@ -44,6 +44,9 @@
         </td>
 
 				<td>
+					<form class="" action="editCheck.php" method="post">
+
+
 					<fieldset>
 						<legend>Edit Profile</legend>
 						<table>
@@ -81,6 +84,7 @@
 						<hr>
 						<input type="submit" name="submit" value="Submit">
 					</fieldset>
+				</form>
 
         </td>
       </tr>
@@ -90,6 +94,7 @@
       </tr>
 
     </table>
+
 
   </body>
 </html>
