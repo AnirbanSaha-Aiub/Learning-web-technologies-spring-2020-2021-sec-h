@@ -35,8 +35,8 @@
           <ul>
             <li><a href="Dashboard.php">Dashbord</a></li>
             <li><a href="viewProfile.php">View Profile</a></li>
-            <li><a href="EditProfile.phm">Edit Profile</a></li>
-            <li><a href="ChangeProfilePicture.phm">Change Profile Picture</a></li>
+            <li><a href="EditProfile.php">Edit Profile</a></li>
+            <li><a href="ChangeProfilePicture.php">Change Profile Picture</a></li>
             <li><a href="ChangePassword.php">Change Password</a></li>
             <li><a href="publicHome.php">Logout</a></li>
           </ul>

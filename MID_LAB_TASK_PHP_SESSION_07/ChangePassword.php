@@ -19,7 +19,7 @@
               <td><img height="50px" weight="50px" src="logo.png" alt=""></td>
               <td align = "right">
                 Logged in as
-                <a href="viewProfile.html">Bob</a>|
+                <a href="viewProfile.php"><?php $user = $_SESSION['current_user']; $name= $user['name']; echo "$name"; ?></a>|
                 <a href="logout.php">Logout</a>
               </td>
             </tr>
@@ -32,12 +32,12 @@
           <h3>Account</h3>
           <hr>
           <ul>
-            <li><a href="Dashboard.html">Dashbord</a></li>
-            <li><a href="viewProfile.html">View Profile</a></li>
-            <li><a href="EditProfile.html">Edit Profile</a></li>
-            <li><a href="ChangeProfilePicture.html">Change Profile Picture</a></li>
-            <li><a href="ChangePassword.html">Change Password</a></li>
-            <li><a href="publicHome.html">Logout</a></li>
+            <li><a href="Dashboard.php">Dashbord</a></li>
+            <li><a href="viewProfile.php">View Profile</a></li>
+            <li><a href="EditProfile.php">Edit Profile</a></li>
+            <li><a href="ChangeProfilePicture.php">Change Profile Picture</a></li>
+            <li><a href="ChangePassword.php">Change Password</a></li>
+            <li><a href="publicHome.php">Logout</a></li>
           </ul>
         </td>
         <td>
