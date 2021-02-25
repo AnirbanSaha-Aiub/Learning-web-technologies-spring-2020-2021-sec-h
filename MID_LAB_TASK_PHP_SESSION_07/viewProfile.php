@@ -42,7 +42,42 @@
             <li><a href="publicHome.php">Logout</a></li>
           </ul>
         </td>
+
         <td>
+          <fieldset>
+            <legend>Profile</legend>
+            <table>
+              <tr>
+                <td>Name</td>
+                <td>:<?php $user = $_SESSION['current_user']; $name= $user['name']; echo "$name"; ?></td>
+                <td rowspan="4" align="center">
+                  <img height="80px" width="80px" src="user.png" alt="">
+                  <br><a href="ChangeProfilePicture.php">Change</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>Email</td>
+                <td>:<?php $user = $_SESSION['current_user']; $email= $user['email']; echo "$email"; ?></td>
+              </tr>
+
+              <tr>
+                <td>Gender</td>
+                <td>:<?php $user = $_SESSION['current_user']; $gender= $user['gender']; echo "$gender"; ?></td>
+              </tr>
+
+              <tr>
+                <td>Date of Birth</td>
+                <td>:<?php $user = $_SESSION['current_user']; $dd= $user['dd']; echo "$dd"; ?>/
+                  <?php $user = $_SESSION['current_user']; $mm= $user['mm']; echo "$mm"; ?>/
+                  <?php $user = $_SESSION['current_user']; $yyyy= $user['yyyy']; echo "$yyyy"; ?>
+
+                </td>
+              </tr>
+
+            </table>
+            <br><a href="EditProfile.php">Edit Profile</a>
+          </fieldset>
 
         </td>
       </tr>
