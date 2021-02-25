@@ -42,7 +42,45 @@
             <li><a href="publicHome.php">Logout</a></li>
           </ul>
         </td>
-        <td>
+
+				<td>
+					<fieldset>
+						<legend>Edit Profile</legend>
+						<table>
+							<tr>
+								<td>Name</td>
+								<td>
+									: <input type="name" name="name" value="<?php $user = $_SESSION['current_user']; $name= $user['name']; echo "$name"; ?>">
+								</td>
+							</tr>
+
+							<tr>
+								<td>Email</td>
+								<td>
+									: <input type="email" name="email" value="<?php $user = $_SESSION['current_user']; $email= $user['email']; echo "$email"; ?>">
+								</td>
+							</tr>
+
+							<tr>
+								<td>Gender</td>
+								<td>
+									: <input type="gender" name="gender" value="<?php $user = $_SESSION['current_user']; $gender= $user['gender']; echo "$gender"; ?>">
+									</td>
+							</tr>
+
+							<tr>
+								<td>Date of Birth</td>
+								<td>
+									: <input size="2" type="text" name="dd" value="<?php $user = $_SESSION['current_user']; $dd= $user['dd']; echo "$dd"; ?>">/
+									<input size="2" type="text" name="mm" value="<?php $user = $_SESSION['current_user']; $mm= $user['mm']; echo "$mm"; ?>">/
+									<input size="4" type="text" name="yyyy" value="<?php $user = $_SESSION['current_user']; $yyyy= $user['yyyy']; echo "$yyyy"; ?>"> (dd,mm,yyyy)
+								</td>
+							</tr>
+
+						</table>
+						<hr>
+						<input type="submit" name="submit" value="Submit">
+					</fieldset>
 
         </td>
       </tr>
