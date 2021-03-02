@@ -1,9 +1,9 @@
 <?php
-	session_start();
-	if(!isset($_SESSION['flag']))
-	{
-		header('location: login.html');
-	}
+	// session_start();
+	// if(!isset($_SESSION['flag']))
+	// {
+	// 	header('location: login.html');
+	// }
 ?>
 
 <!DOCTYPE html>
