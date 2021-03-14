@@ -18,7 +18,7 @@
 							'id'=>$id,
 							'password'=>$password,
 							'name'=> $name,
-							'userType'=>$usersType
+							'userType'=> $usersType
 						];
 
 				$data = json_encode($users);

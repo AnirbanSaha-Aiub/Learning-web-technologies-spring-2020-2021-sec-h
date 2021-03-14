@@ -4,15 +4,21 @@
 
 	if(isset($_POST['submit'])){
 
-		$username = $_POST['username'];
+		$id = $_POST['id'];
 		$password = $_POST['password'];
 
-		if($username == "" || $password == ""){
+		if($id == "" || $password == ""){
 			echo "null submission...";
 		}else{
 			$users = json_decode($data, true);
-			if($username == $users['username'] && $password == $users['password']){
-				header('location: ../view/home.php');
+			if($id == $users['id'] && $password == $users['password']){
+				if( $users['userType'] == 'user'){
+					header('location: ../view/user_home.html');
+				}
+				else {
+					header('location: ../view/admin_home.html');
+				}
+				
 			}else{
 				echo "invalid user";
 			}
