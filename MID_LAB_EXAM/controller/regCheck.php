@@ -2,21 +2,23 @@
 
 	if(isset($_POST['signup'])){
 
-		$username = $_POST['username'];
+		$id = $_POST['id'];
 		$password = $_POST['password'];
 		$repass = $_POST['repass'];
-		$email = $_POST['email'];
+		$name = $_POST['name'];
+		$userType =  $_POST['userType'];
 
-		if($username == "" || $email == "" || $password == "" || $repass == ""){
+		if($id == "" || $name == "" || $password == "" || $repass == "" || $userType == ""){
 			echo "null submission...";
 		}else{
 
 			if($password == $repass){
 
 				$users = [
-							'username'=>$username,
+							'id'=>$id,
 							'password'=>$password,
-							'email'=> $email
+							'name'=> $name,
+							'userType'=>$usersType
 						];
 
 				$data = json_encode($users);
