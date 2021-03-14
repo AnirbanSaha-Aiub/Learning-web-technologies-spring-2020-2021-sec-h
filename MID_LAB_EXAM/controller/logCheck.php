@@ -18,8 +18,9 @@
 				else {
 					header('location: ../view/admin_home.html');
 				}
-				
-			}else{
+
+			}
+			else{
 				echo "invalid user";
 			}
 		}
