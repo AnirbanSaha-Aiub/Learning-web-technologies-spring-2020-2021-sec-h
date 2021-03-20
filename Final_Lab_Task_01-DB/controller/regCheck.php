@@ -18,8 +18,8 @@
 				$user = [
 							'username' => $username,
 							'password' => $password,
-							'email' => $email,
-							'type' => 'user'
+							'email' => $email
+
 						];
 
 				$status = insertUser($user);

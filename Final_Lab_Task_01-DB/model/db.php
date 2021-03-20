@@ -3,7 +3,7 @@
 	$dbuser = 'root';
 	$dbpass = '';
 	$host 	= 'localhost';
-	$dbname	= 'webtech';
+	$dbname	= 'task_01';
 
 
 	function getConnection(){
