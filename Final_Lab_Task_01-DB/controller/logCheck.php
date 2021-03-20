@@ -12,7 +12,7 @@
 		}else{
 			//$user = $_SESSION['current_user'];
 			$sql = "select * from user where user_name='$username' and password='$password'";
-			$result = mysqli_query($db, $sql);
+			$result = mysqli_query($conn, $sql);
       $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
       $active = $row['active'];
 
