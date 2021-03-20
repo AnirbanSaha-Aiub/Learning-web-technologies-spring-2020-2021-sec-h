@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	$conn = mysqli_connect('localhost', 'root', '', 'task_01');
+	require_once('../model/userModel.php');
 
 	if(isset($_POST['submit'])){
 
@@ -10,16 +10,14 @@
 		if($username == "" || $password == ""){
 			echo "null submission...";
 		}else{
-			//$user = $_SESSION['current_user'];
-			$sql = "select * from user where user_name='$username' and password='$password'";
-			$result = mysqli_query($conn, $sql);
-      $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-      $active = $row['active'];
 
-      $count = mysqli_num_rows($result);
-			if($count == 1) {
+			$status = validateUser($username, $password);
+			if($status){
 				$_SESSION['flag'] = true;
+				$_SESSION['username'] = $username;
+
 				header('location: ../view/home.php');
+
 			}else{
 				echo "invalid user";
 			}
