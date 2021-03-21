@@ -1,6 +1,7 @@
 <?php
 	$title= "User list Page";
 	include('header.php');
+	require_once('../model/userModel.php');
 ?>
 
 	<div id="page_title">
@@ -26,7 +27,7 @@
 				<td>alamin@gmail.com</td>
 				<td>
 					<a href="edit.php?id=1">EDIT</a> |
-					<a href="delete.php?id=1">DELETE</a> 
+					<a href="delete.php?id=1">DELETE</a>
 				</td>
 			</tr>
 			<tr>
@@ -35,7 +36,7 @@
 				<td>xyz@gmail.com</td>
 				<td>
 					<a href="edit.php?id=2">EDIT</a> |
-					<a href="delete.php?id=2">DELETE</a> 
+					<a href="delete.php?id=2">DELETE</a>
 				</td>
 			</tr>
 			<tr>
@@ -44,7 +45,7 @@
 				<td>abc@gmail.com</td>
 				<td>
 					<a href="edit.php?id=3">EDIT</a> |
-					<a href="delete.php?id=3">DELETE</a> 
+					<a href="delete.php?id=3">DELETE</a>
 				</td>
 			</tr>
 		</table>
