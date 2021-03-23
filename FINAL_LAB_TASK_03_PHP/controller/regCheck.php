@@ -1,32 +1,38 @@
 <?php
+	session_start();
+	require_once('../model/userModel.php');
 
-	if(isset($_POST['signup'])){
+	if(isset($_POST['Regester'])){
 
 		$id = $_POST['id'];
 		$password = $_POST['password'];
 		$repass = $_POST['repass'];
 		$name = $_POST['name'];
-		$userType =  $_POST['userType'];
+		$email = $_POST['email'];
+		$userType = $_POST['userType'];
 
-		if($id == "" || $name == "" || $password == "" || $repass == "" || $userType == ""){
+		if($id == "" || $email == "" || $name == "" || $password == "" ||$userType == "" || $repass == ""){
 			echo "null submission...";
 		}else{
 
 			if($password == $repass){
 
-				$users = [
-							'id'=>$id,
-							'password'=>$password,
-							'name'=> $name,
-							'userType'=> $usersType
+				$user = [
+							'id' => $id,
+							'password' => $password,
+							'name' => $name,
+							'email' => $email,
+							'userType' => $userType
 						];
 
-				$data = json_encode($users);
-				$userData = fopen("../model/users.json", "w");
-				fwrite($userData, $data);
-				fclose($userData);
+				$status = insertUser($user);
 
-				header('location: ../view/login.html');
+				if($status){
+					header('location: ../view/login.html');
+				}else{
+					echo "error";
+				}
+
 			}else{
 				echo "password & confirm password mismatch..";
 			}
