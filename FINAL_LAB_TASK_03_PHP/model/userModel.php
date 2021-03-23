@@ -53,9 +53,9 @@
 			return false;
 		}
 	}
-	function changePassword($id, $password){
+	function changePassword($id, $newPass){
 		$conn = getConnection();
-		$sql = "update user set password='{$password}' where id='{$id}'";
+		$sql = "update user set password='{$newPass}' where id='{$id}'";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{
