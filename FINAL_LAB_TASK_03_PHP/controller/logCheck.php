@@ -14,32 +14,16 @@
 			if($status){
 				$_SESSION['flag'] = true;
 				$_SESSION['id'] = $id;
-				$type = getUsertype($id);
 
-				if($type == 'User'){
-						header('location: ../view/user_home.html');
-				 	}
-				 	else {
-				 		header('location: ../view/admin_home.html');
-				 	}
+				$user=getUserById($id);
+        if($user['userType']=="User"){
+					header('location: ../view/user_home.php');
+				}
+				else {
+				  		header('location: ../view/admin_home.html');
+				 }
 
-				  }
-
-
-
-
-
-
-			// $users = json_decode($data, true);
-			// if($id == $users['id'] && $password == $users['password']){
-			// 	if( $users['userType'] == 'User'){
-			// 		header('location: ../view/user_home.html');
-			// 	}
-			// 	else {
-			// 		header('location: ../view/admin_home.html');
-			// 	}
-			//
-			// }
+			}
 			else{
 				echo "invalid user";
 			}
