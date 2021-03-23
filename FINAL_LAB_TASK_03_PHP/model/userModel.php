@@ -2,11 +2,11 @@
 
 	require_once('db.php');
 
-	function validateUser($username, $password){
+	function validateUser($id, $password){
 
 		$conn = getConnection();
 
-		$sql = "select * from user where user_name='{$id}' and password='{$password}'";
+		$sql = "select * from user where id='{$id}' and password='{$password}'";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
 
@@ -15,6 +15,18 @@
 		}else{
 			return false;
 		}
+	}
+
+	function getUsertype($id){
+
+		$conn = getConnection();
+
+		$sql = "select userType from user where id='{$id}'";
+		$result = mysqli_query($conn, $sql);
+
+		// $row = mysqli_fetch_assoc($result);
+
+		return $result;
 	}
 
 	function getUserById($id){

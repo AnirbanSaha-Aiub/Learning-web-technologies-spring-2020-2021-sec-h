@@ -10,12 +10,20 @@
 		if($id == "" || $password == ""){
 			echo "null submission...";
 		}else{
-			$status = validateUser($username, $password);
+			$status = validateUser($id, $password);
 			if($status){
 				$_SESSION['flag'] = true;
-				$_SESSION['username'] = $username;
+				$_SESSION['id'] = $id;
+				$type = getUsertype($id);
 
-				header('location: ../view/home.php');
+				if($type == 'User'){
+						header('location: ../view/user_home.html');
+				 	}
+				 	else {
+				 		header('location: ../view/admin_home.html');
+				 	}
+
+				  }
 
 
 
