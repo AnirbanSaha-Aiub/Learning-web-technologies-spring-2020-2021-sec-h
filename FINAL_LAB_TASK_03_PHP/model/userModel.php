@@ -17,17 +17,6 @@
 		}
 	}
 
-	function getUsertype($id){
-
-		$conn = getConnection();
-
-		$sql = "select userType from user where id='{$id}'";
-		$result = mysqli_query($conn, $sql);
-
-		// $row = mysqli_fetch_assoc($result);
-
-		return $result;
-	}
 
 	function getUserById($id){
 
@@ -58,6 +47,15 @@
 		$conn = getConnection();
 		$sql = "insert into user values('{$user['id']}', '{$user['password']}', '{$user['name']}', '{$user['email']}', '{$user['userType']}')";
 
+		if(mysqli_query($conn, $sql)){
+			return true;
+		}else{
+			return false;
+		}
+	}
+	function changePassword($id, $password){
+		$conn = getConnection();
+		$sql = "update user set password='{$password}' where id='{$id}'";
 		if(mysqli_query($conn, $sql)){
 			return true;
 		}else{

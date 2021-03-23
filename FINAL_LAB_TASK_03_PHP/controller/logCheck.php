@@ -20,7 +20,7 @@
 					header('location: ../view/user_home.php');
 				}
 				else {
-				  		header('location: ../view/admin_home.html');
+				  		header('location: ../view/admin_home.php');
 				 }
 
 			}
