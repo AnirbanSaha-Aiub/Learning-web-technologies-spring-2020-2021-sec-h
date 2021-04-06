@@ -47,30 +47,31 @@
               </td>
 
               <td>
-								<script type="text/javascript">
-								function validate() {
-										const name= document.getElementById('name').value;
-										if (name=="") {
-												document.getElementById('msg').innerHTML="Name cannot be empty";
-												return false;
-										} else {
-												if(name.length<2){
-														document.getElementById('msg').innerHTML="Name cannot be empty";
-														return false;
-												}
-												else{
-
-														return true;
-												}
-										}
 
 
-									}
-								</script>
-
-                <form  class="" action="../Controller/regCheckTeacher.php" method="post" onsubmit="return validate();" method="post" enctype="multipart/form-data">
+                <form  class="" action="" method="post" onsubmit="return validate();" method="post" enctype="multipart/form-data">
                   <fieldset >
                     <legend>REGESTRATION</legend>
+                    <script type="text/javascript">
+                    function validate() {
+                        const name= document.getElementById('name').value;
+                        if (name=="") {
+                            document.getElementById('msg').innerHTML="Name cannot be empty";
+                            return false;
+                        } else {
+                            if(name.length<2){
+                                document.getElementById('msg').innerHTML="Name cannot be empty";
+                                return false;
+                            }
+                            else{
+
+                                return true;
+                            }
+                        }
+
+
+                      }
+                    </script>
                       <table align="center">
                         <tr>
                           <td>Name</td>
