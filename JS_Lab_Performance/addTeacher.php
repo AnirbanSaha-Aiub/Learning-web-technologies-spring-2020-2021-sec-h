@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>add Teacher</title>
+  </head>
+  <body>
+    <table border="1" cellspacing="0" width="100%" >
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td><img height="50px" weight="50px" src="../Resources/logo.png" alt=""></td>
+              <td align = "center"><h1>School Management System</h1></td>
+              <td align = "right">
+                <a href="dashboard.php">Back</a> |
+                <a href="../Controller/logout.php">Logout</a>
+
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <table width="100%" cellspacing="0" border="1">
+            <tr>
+              <td width="250px">
+                <center>
+                  <h3>Login As</h3>
+                  <h2>
+										<!-- <?php $Username = json_decode(file_get_contents('../Model/admin.json')); echo $Username->name;  ?> -->
+									</h2>
+                  <p>(Admin)</p>
+                </center>
+                <hr>
+
+                <ul>
+                  <li><a href="addTeacher.php">Add Teacher</a></li>
+                  <li><a href="viewTeacher.php">View Teacher</a></li>
+                  <li><a href="dashboard.php">Dashbord</a></li>
+                  <li><a href="../Controller/logout.php">Logout</a></li>
+
+                </ul>
+              </td>
+
+              <td>
+								<script type="text/javascript">
+								function validate() {
+										const name= document.getElementById('name').value;
+										if (name=="") {
+												document.getElementById('msg').innerHTML="Name cannot be empty";
+												return false;
+										} else {
+												if(name.length<2){
+														document.getElementById('msg').innerHTML="Name cannot be empty";
+														return false;
+												}
+												else{
+
+														return true;
+												}
+										}
+
+
+									}
+								</script>
+
+                <form  class="" action="../Controller/regCheckTeacher.php" method="post" onsubmit="return validate();" method="post" enctype="multipart/form-data">
+                  <fieldset >
+                    <legend>REGESTRATION</legend>
+                      <table align="center">
+                        <tr>
+                          <td>Name</td>
+                          <td>:<input type="text" name="name" placeholder="Enter Full Name"></td>
+                        </tr>
+                        <tr>
+                          <td>Email</td>
+                          <td>:<input type="email" name="email" value=""></td>
+                        </tr>
+
+												<tr>
+                          <td>Mobile No</td>
+                          <td>:<input type="number" name="mobile" value=""><span id="numloc"></span></td>
+                        </tr>
+                        <tr>
+                          <td>Id</td>
+                          <td>:<input type="text" name="id" value=""></td>
+                        </tr>
+                        <tr>
+                          <td>Password</td>
+                          <td>:<input type="password" name="password" value=""></td>
+                        </tr>
+                        <tr>
+                          <td>Confirm Password</td>
+                          <td>:<input type="password" name="repass" value=""></td>
+                        </tr>
+                        <tr>
+                          <td>Gender</td>
+                          <td>
+                            :<input type="radio" name="gender" value="male">Male
+                            <input type="radio" name="gender" value="female">Female
+                            <input type="radio" name="gender" value="other">Other
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>Date of Birth</td>
+                          <td>:<input type="date" name="dob" value=""></td>
+                        </tr>
+
+                      </table>
+                      <hr>
+                      <center>
+                        <input type="submit" name="submit" value="Submit">
+                        <input type="reset" name="reset" value="Reset">
+                    </center>
+                  </fieldset>
+                </form>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+
+			<tr>
+			  <td align="center" >Copyright Ⓒ 2021</td>
+			</tr>
+
+			</table>
+
+			</body>
+			</html>
